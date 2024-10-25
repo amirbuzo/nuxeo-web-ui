@@ -247,9 +247,13 @@ Then(/^I can perform the following publications$/, async function (table) {
       console.log('isdocumentPublishedisdocumentPublishedisdocumentPublished', isdocumentPublished)
       isdocumentPublished.should.be.true;
       page = await this.ui.browser.documentPage(this.doc.type);
+      console.log('pagepagepagepage 250', page)
       const newCount = await page.publicationsCount;
+      console.log('newCountnewCountnewCount 252', newCount)
       let check;
       const bar = await page.isVisible('#versionInfoBar');
+
+      console.log('barbarbarbarbar 256', bar)
       if (bar) {
         check = newCount === 0;
       } else {
